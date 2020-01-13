@@ -137,21 +137,20 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 # `draw`
 
 1. Our draw function will take the values stored in our `board` array and print them to the screen. We can accomplish this by iterating over the array.
+  {% spoiler %}
 
-   {% spoiler %}
+  Use another set of nested for loops:
+  ```c
+  for (int i = 0; i < d; i++)
+  {
+    for (int j = 0; j < d; j++)
+    {
 
-   Use another set of nested for loops:
-   ```c
-   for (int i = 0; i < d; i++)
-   {
-      for (int j = 0; j < d; j++)
-      {
-
-      }
-   }
-   ```
-   a;sldkjf
-   {% endspoiler %}
+    }
+  }
+  ```
+  a;sldkjf
+  {% endspoiler %}
 
 
 
