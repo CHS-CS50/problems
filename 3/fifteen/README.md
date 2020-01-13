@@ -110,7 +110,7 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
    int total = d * d;`
    ```
    
-1. Next, we need to add tiles to the board based on `total`. We can use a set of nested for loops to do this like so:
+1. Next, we need to add values to the `board` array based on `total`. We can use a set of nested for loops to do this like so:
 
    ```
    for (int i = 0; i < d; i++)
@@ -122,7 +122,7 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
    }
    ```
    
-1. In the inner for loop we want to store a value from `total` to an array called `board` then subtract one from `total`.
+1. In the inner for loop we want to store a value from `total` to the `board` array then subtract one from `total`.
 
    ```
    board[i][j] = --total;
@@ -142,7 +142,7 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
 
 # `draw`
 
-1. Our draw function will take the values stored from total and assign them to our `board` array. 
+1. Our draw function will take the values stored in our `board` array and print them to the screen.
 
 {% next "Ready to Test" %}
 
