@@ -19,19 +19,19 @@ Tile to move:
 
 {% next "Let's Start!" %}
 
-# Getting Ready
-
-Have a more in-depth look at debugging techniques from Doug. (Odds are these 30 minutes with Doug will save you hours over the course of the term!)
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VtkMZjvvKaU"><img src="http://img.youtube.com/vi/VtkMZjvvKaU/0.jpg" alt="CS50 Debugging" width="240" height="180" border="10" /></a>
-
-## Background
+# Background
 
 The Game of Fifteen is a puzzle played on a square, two-dimensional board with numbered tiles that slide. The goal of this puzzle is to arrange the board's tiles from smallest to largest, left to right, top to bottom, with an empty space in board's bottom-right corner, as in the below.
 
 Sliding any tile that borders the board's empty space in that space constitutes a "move."  Although the configuration above depicts a game already won, notice how the tile numbered 12 or the tile numbered 15 could be slid into the empty space. Tiles may not be moved diagonally, though, or forcibly removed from the board.
 
 Although other configurations are possible, we shall assume that this game begins with the board's tiles in reverse order, from largest to smallest, left to right, top to bottom, with an empty space in the board's bottom-right corner. *If, however, and only if the board contains an odd number of tiles (i.e., the height and width of the board are even), the positions of tiles numbered 1 and 2 must be swapped, as in the below.* The puzzle is solvable from this configuration.
+
+# Before You Begin
+
+Have a more in-depth look at debugging techniques from Doug. (Odds are these 30 minutes with Doug will save you hours over the course of the term!)
+
+[Doug on YouTube](http://www.youtube.com/watch?feature=player_embedded&v=VtkMZjvvKaU)
 
 {% next "Continue" %}
 
@@ -100,27 +100,24 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 1. First, we want to get the total number of spaces. To do this, we need to take the number the user provides when they run the program, multiply it by itself, and store it in a `int` called `total`.
 
-   ```c
-   int total = d * d;
+   ```
+   total is d times itself
    ```
 
 1. Next, we need to add values to the `board` array based on `total`. We can use a set of nested for loops to do this like so:
 
-   ```c
-   for (int i = 0; i < d; i++)
-   {
-      for (int j = 0; j < d; j++)
-      {
-
-      }
-   }
+   ```
+   for each row
+      for each column
+         do something
    ```
 
 1. In the inner for loop we want to store a value from `total` to the `board` array then subtract one from `total`.
 
-   ```c
-   board[i][j] = --total;
    ```
+   board array is set to a value from total (then take a value away)
+   ```
+
 
 1. Finally, we need to swap the values *1* and *2* if the board has an even number of spaces. To do this we can use an `if` statement and see if the total number of spaces is evenly divisible by *2*.
 
@@ -138,14 +135,10 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 1. Our draw function will take the values stored in our `board` array and print them to the screen. We can accomplish this by iterating over the array.
 
-   ```c
-   for (int i = 0; i < d; i++)
-   {
-    for (int j = 0; j < d; j++)
-    {
-
-    }
-   }
+   ```
+   for each row
+      for each column
+         do something
    ```
 
 1. Next we need to print either an integer from the `board` array or an underscore for the empty space. We'll use an `if/else` to do this.
