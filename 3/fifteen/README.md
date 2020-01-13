@@ -70,7 +70,7 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Rx_FJb3vr9U" target="_blank"><img src="http://img.youtube.com/vi/Rx_FJb3vr9U/0.jpg" alt="Fifteen Walkthrough" width="240" height="180" border="10" /></a>
 
-## Hints
+{% spoiler "Hints" %}
 
 - Remember to take "baby steps." Don't try to bite off the entire game at once.
 - Implement one function at a time and be sure that it works before forging ahead. Remember to treat each function as a distinct piece of the program (e.g., the `init` function should not print anything; the `draw` function should not modify the board; etc.).
@@ -97,6 +97,52 @@ Incidentally, recall that the positions of tiles numbered 1 and 2 should only st
 ```
 
 Do not alter the flow of logic in `main` itself so that we can automate some tests of your program once submitted. In particular, `main` must only return `0` if and when the user has actually won the game; non-zero values should be returned in any cases of error, as implied by our distribution code.
+
+{% endspoiler %}
+
+{% next "implement `init`" %}
+
+# `init`
+
+1. First, we want to get the total number of spaces. To do this, we need to take the number the user provides when they run the program, multiply it by itself, and store it in a `int` called `total`.
+
+{% spoiler "Hint" %}
+
+`int total = d * d;`
+
+{% endspoiler %}
+
+1. Next, we need to add tiles to the board based on `total`. We can use a set of nested for loops to do this like so:
+   ```
+   for (int i = 0; i < d; i++)
+   {
+      for (int j = 0; j < d; j++)
+      {
+      
+      }
+   }
+   ```
+1. In the inner for loop we want to store a value from `total` to an array called `board` then subtract one from `total`.
+
+   {% spoiler "Hint" %}
+
+   `board[i][j] = --total;`
+
+   {% endspoiler %}
+
+1. Finally, we need to swap the values *1* and *2* if the board has an even number of spaces. To do this we can use an `if` statement and see if the total number of spaces is evenly divisible by *2*.
+
+   {% spoiler "Hint" %}
+
+   ```
+   if ((d * d) % 2 == 0)
+       {
+           board[d - 1][d - 3] = 1;
+           board[d - 1][d - 2] = 2;
+       }
+   ```
+
+   {% endspoiler %}
 
 {% next "Ready to Test" %}
 
