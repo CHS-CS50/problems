@@ -101,7 +101,7 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 1. First, we want to get the total number of spaces. To do this, we need to take the number the user provides when they run the program, multiply it by itself, and store it in a `int` called `total`.
 
    ```c
-   int total = d * d;`
+   int total = d * d;
    ```
 
 1. Next, we need to add values to the `board` array based on `total`. We can use a set of nested for loops to do this like so:
@@ -137,7 +137,8 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 # `draw`
 
 1. Our draw function will take the values stored in our `board` array and print them to the screen. We can accomplish this by iterating over the array.
-  ```c
+
+   ```c
    for (int i = 0; i < d; i++)
    {
     for (int j = 0; j < d; j++)
@@ -147,8 +148,16 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
    }
    ```
 
-1. alfhslkdhflsahdf
+1. Next we need to print either an integer from the `board` array or an underscore for the empty space. We'll use an `if/else` to do this.
 
+   ```
+   if board value is equal to 0
+     print an underscore
+   else
+     print an integer from board
+   ```
+
+1. dfsgsd
 
 
 
