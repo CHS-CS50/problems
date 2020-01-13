@@ -1,0 +1,9 @@
+lab50:
+  window:
+    - editor
+    - readme
+    - terminal
+    
+  files:
+    - !include fifteen.c
+    - !include questions.md
