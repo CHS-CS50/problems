@@ -23,9 +23,7 @@ Tile to move:
 
 Have a more in-depth look at debugging techniques from Doug. (Odds are these 30 minutes with Doug will save you hours over the course of the term!)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VtkMZjvvKaU
-" target="_blank"><img src="http://img.youtube.com/vi/VtkMZjvvKaU/0.jpg" 
-alt="CS50 Debugging" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=VtkMZjvvKaU"><img src="http://img.youtube.com/vi/VtkMZjvvKaU/0.jpg" alt="CS50 Debugging" width="240" height="180" border="10" /></a>
 
 {% next "Ready to Move On %}
 
@@ -68,7 +66,7 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 ## Walkthrough
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Rx_FJb3vr9U" target="_blank"><img src="http://img.youtube.com/vi/Rx_FJb3vr9U/0.jpg" alt="Fifteen Walkthrough" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Rx_FJb3vr9U"><img src="http://img.youtube.com/vi/Rx_FJb3vr9U/0.jpg" alt="Fifteen Walkthrough" width="240" height="180" border="10" /></a>
 
 {% spoiler "Hints" %}
 
@@ -109,7 +107,7 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
    ```
    int total = d * d;`
    ```
-   
+
 1. Next, we need to add values to the `board` array based on `total`. We can use a set of nested for loops to do this like so:
 
    ```
@@ -117,17 +115,17 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
    {
       for (int j = 0; j < d; j++)
       {
-      
+
       }
    }
    ```
-   
+
 1. In the inner for loop we want to store a value from `total` to the `board` array then subtract one from `total`.
 
    ```
    board[i][j] = --total;
    ```
-   
+
 1. Finally, we need to swap the values *1* and *2* if the board has an even number of spaces. To do this we can use an `if` statement and see if the total number of spaces is evenly divisible by *2*.
 
    ```
@@ -137,12 +135,34 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
            board[d - 1][d - 2] = 2;
        }
    ```
-   
+
 {% next "Implement draw" %}
 
 # `draw`
 
-1. Our draw function will take the values stored in our `board` array and print them to the screen.
+1. Our draw function will take the values stored in our `board` array and print them to the screen. We can accomplish this by iterating over the array.
+
+   {% spoiler %}
+
+   Use another set of nested for loops:
+   ```
+   for (int i = 0; i < d; i++)
+   {
+      for (int j = 0; j < d; j++)
+      {
+
+      }
+   }
+   ```
+   {% endspoiler %}
+
+
+
+
+
+
+
+
 
 {% next "Ready to Test" %}
 
