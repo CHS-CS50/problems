@@ -141,7 +141,7 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
    {% spoiler %}
 
    Use another set of nested for loops:
-   ```
+   ```c
    for (int i = 0; i < d; i++)
    {
       for (int j = 0; j < d; j++)
