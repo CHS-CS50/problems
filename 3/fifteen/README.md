@@ -106,11 +106,11 @@ Do not alter the flow of logic in `main` itself so that we can automate some tes
 
 1. First, we want to get the total number of spaces. To do this, we need to take the number the user provides when they run the program, multiply it by itself, and store it in a `int` called `total`.
 
-{% spoiler "Hint" %}
+   {% spoiler "Hint" %}
 
-`int total = d * d;`
+   `int total = d * d;`
 
-{% endspoiler %}
+   {% endspoiler %}
 
 1. Next, we need to add tiles to the board based on `total`. We can use a set of nested for loops to do this like so:
    ```
