@@ -100,13 +100,13 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 1. First, we want to get the total number of spaces. To do this, we need to take the number the user provides when they run the program, multiply it by itself, and store it in a `int` called `total`.
 
-   ```
+   ```c
    int total = d * d;`
    ```
 
 1. Next, we need to add values to the `board` array based on `total`. We can use a set of nested for loops to do this like so:
 
-   ```
+   ```c
    for (int i = 0; i < d; i++)
    {
       for (int j = 0; j < d; j++)
@@ -118,13 +118,13 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
 1. In the inner for loop we want to store a value from `total` to the `board` array then subtract one from `total`.
 
-   ```
+   ```c
    board[i][j] = --total;
    ```
 
 1. Finally, we need to swap the values *1* and *2* if the board has an even number of spaces. To do this we can use an `if` statement and see if the total number of spaces is evenly divisible by *2*.
 
-   ```
+   ```c
    if ((d * d) % 2 == 0)
        {
            board[d - 1][d - 3] = 1;
@@ -137,17 +137,15 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 # `draw`
 
 1. Our draw function will take the values stored in our `board` array and print them to the screen. We can accomplish this by iterating over the array.
-  {% spoiler %}
   ```c
-  for (int i = 0; i < d; i++)
-  {
-   for (int j = 0; j < d; j++)
+   for (int i = 0; i < d; i++)
    {
+    for (int j = 0; j < d; j++)
+    {
 
+    }
    }
-  }
-  ```
-  {% endspoiler %}
+   ```
 
 1. alfhslkdhflsahdf
 
