@@ -35,9 +35,9 @@ Sliding any tile that borders the board's empty space in that space constitutes 
 
 Although other configurations are possible, we shall assume that this game begins with the board's tiles in reverse order, from largest to smallest, left to right, top to bottom, with an empty space in the board's bottom-right corner. *If, however, and only if the board contains an odd number of tiles (i.e., the height and width of the board are even), the positions of tiles numbered 1 and 2 must be swapped, as in the below.* The puzzle is solvable from this configuration.
 
-{% next "Ready to Move On %}
+{% next "Ready to Move On" %}
 
-## Understanding
+# Understanding
 
 Take a look at `fifteen.c`. Within this file is an entire framework for the Game of Fifteen. The challenge up next is to complete this game's implementation.
 
@@ -45,15 +45,13 @@ But first go ahead and compile the framework. (Can you figure out how?) And, eve
 
 Anyhow, it appears that the game is at least partly functional. Granted, it's not much of a game yet. But that's where you come in!
 
-{% next "Ready to Move On %}
-
 ## Checking for Understanding
 
 Read over the code and comments in `fifteen.c` and then answer the questions in `questions.md`, which is a (nearly empty) text file that we included for you inside of the distribution's `fifteen` directory.
 
 No worries if you're not quite sure how `fprintf` or `fflush` work; we're simply using those to automate some testing.
 
-{% next "Let's Move On" %}
+{% next %}
 
 # TODO
 
