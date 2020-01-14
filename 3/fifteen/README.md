@@ -150,14 +150,61 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
      print an integer from board
    ```
 
-1. dfsgsd
+1. This next step is what will actually move the players choice with the empty space. We are going to edit the board array only if the move is legal.
 
+   ```c
+   if (row - 1 >= 0 && board[row - 1][column] == 0)
+    {
+        board[row - 1][column] = board[row][column];
+        board[row][column] = 0;
+        return true;
+    }
+    else if (row + 1 < d && board[row + 1][column] == 0)
+    {
+        board[row + 1][column] = board[row][column];
+        board[row][column] = 0;
+        return true;
+    }
+    else if (column - 1 >= 0 && board[row][column - 1] == 0)
+    {
+        board[row][column - 1] = board[row][column];
+        board[row][column] = 0;
+        return true;
+    }
+    else if (column + 1 < d && board[row][column + 1] == 0)
+    {
+        board[row][column + 1] = board[row][column];
+        board[row][column] = 0;
+        return true;
+    }
+    ```
 
+{% next "Implement won" %}
 
+# `won`
 
+Now we need to build the function that lets the player know they've won. The function should test to see if the numbers are in an increasing order on the board, left to right, top to bottom. We are going to iterate over the board and check the values. We will `return false` if any value is incorrect and `true` when they are in the correct order.
 
+1. Start by creating a var to hold the total value starting at 0.
 
+   ```
+   int variable_name = 0;
+   ```
 
+1. Next we will use our nested for loops to iterate over the array.
+
+   ```
+   for each row
+      for each column
+         do something
+   ```
+
+1. In the inner loop use an if statement to check and see if a value added to your variable is not equal to the total number of spots available and the board array value is not equal to the variable. If that condition is true, `return false`. Otherwise we will return true which is already in the code.
+
+   ```
+   if value added to variable is not equal to total number of spots and board location is not equal to the variable
+      return false
+   ```
 
 {% next "Ready to Test" %}
 
