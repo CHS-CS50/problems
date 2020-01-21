@@ -32,5 +32,11 @@ Unfortunately for you (though even more unfortunately for Mr. Boddy), the only e
 
 ![clue.bmp](clue.bmp)
 
+You long ago threw away that piece of red plastic from childhood that would solve this mystery for you, and so you must attack it as a computer scientist instead.
+
+But, first, some background.
+
+Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below. [1]
+
 
 
