@@ -145,9 +145,34 @@ Implement the Game of Fifteen, per the comments in `fifteen.c`.
 
    ```
    if board value is equal to 0
-     print an underscore
+      print an underscore
    else
-     print an integer from board
+      print an integer from board
+      
+   print a new line
+   ```
+   
+{% next "Implement move" %}
+
+1. First we want to see if the tile they provide is valid. We can do this using an `if` statement.
+   ```
+   if tile is one less then the total number of spaces or the tile is less then 0
+      return false
+   ```
+
+1. Next, we will search for the location of the tile on the board. Create variables for `row` and `column` setting each equal to `0`.
+   ```c
+   int row = 0;
+   int column = 0;
+   ```
+
+1. Next, loop through each row then column and if the boards location matches the tile store those values in the variables you just created.
+   ```
+   for each row
+      for each column
+         if board location is equal to the tile
+            set row to location
+            set column to location
    ```
 
 1. This next step is what will actually move the players choice with the empty space. We are going to edit the board array only if the move is legal.
